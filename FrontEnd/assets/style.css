@@ -137,36 +137,47 @@ li:hover {
 	width: 100%;
 
 }
-#contact {
+#contact ,#login{
 	width: 50%;
-margin: auto;
+	margin: auto;
 }
-#contact > * {
+#contact > *,#login > * {
 	text-align: center;
 
 }
-#contact h2{
+#contact h2,#login h2{
 	margin-bottom: 20px;
 }
-#contact form {
+#contact form ,#login form{
 	text-align: left;
 	margin-top:30px;
 	display: flex;
 	flex-direction: column;
 }
 
-#contact input {
+#login{
+	margin-bottom:40px;
+}
+
+#contact input ,#login input{
 	height: 50px;
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
-#contact label {
+#contact label,#login label {
 	margin: 2em 0 1em 0;
 }
 #contact textarea {
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#login a{
+	
+	color: black;
+	width: 180px;
+	text-align: center;
+	margin: auto;
 }
 
 input[type="submit"]{
@@ -186,3 +197,29 @@ footer nav ul {
 	margin: 2em
 }
 
+/* menu category */
+.menuCategory
+{
+	margin-bottom: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: center; 
+}
+
+.menuCategory button
+{
+	color: #1D6154;
+	border-radius: 60px;
+	padding: 10px;
+	background-color: #ffffff;
+	font-size: 19px;
+	text-align: center;
+	border: 1px solid; 
+	margin: 10px;
+}
+
+.menuCategory button:hover
+{
+	color: #ffffff;
+	background-color: #1D6154; 
+}
