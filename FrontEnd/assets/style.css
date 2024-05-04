@@ -156,7 +156,13 @@ li:hover {
 }
 
 #login{
-	margin-bottom:40px;
+	margin-bottom:50px; 
+    box-sizing: border-box; 
+    min-height: 70vh;              /* 100vh = 100% */
+    display: flex;
+	flex-direction: column;            
+    justify-content: center;             
+    width: 30%;   
 }
 
 #contact input ,#login input{
@@ -178,6 +184,12 @@ li:hover {
 	width: 180px;
 	text-align: center;
 	margin: auto;
+}
+#login form span 
+{
+	color:#f5061a; 
+	font-size: 16px; 
+	margin-top: 15px;
 }
 
 input[type="submit"]{
@@ -223,3 +235,4 @@ footer nav ul {
 	color: #ffffff;
 	background-color: #1D6154; 
 }
+
