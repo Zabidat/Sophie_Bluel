@@ -390,10 +390,12 @@ function ajoutNewWork() {
       const inputTitle = document.querySelector('#title').value;
       const SelectForm = document.querySelector('#category').value;
       const spantag = document.querySelector('.form-modal #spanErrorMessage');
-      // console.log(inputFile);
+       //console.log(inputFile);
 
       // Processing of form data
-      if (inputFile !== null && inputFile.size / (1024 * 1024) > 4) {
+      if(inputFile === undefined) {
+        spantag.innerHTML = 'Veuillez ajouter une image';
+      } else if (inputFile !== undefined && inputFile.size / (1024 * 1024) > 4) {
         // For image tag of form Modal
         spantag.innerHTML = 'La taille du fichier a dépasseé (maximum 4 mo)';
       } else if (SelectForm === '') {
