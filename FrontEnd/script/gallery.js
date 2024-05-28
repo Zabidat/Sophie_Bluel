@@ -2,8 +2,6 @@
 import {
   genererGalerie,
   GeneratedFilterWithNoAPI,
-  loginConnexion,
-  Authentification,
   genererbanniere,
   ajoutModal,
   ajoutPhoto,
@@ -116,27 +114,21 @@ function logout() {
   localStorage.clear();
   // Redirect to the page indicated
   /* eslint-disable-next-line no-restricted-globals */
-  location.assign('http://127.0.0.1:8080');
+  window.location.replace('index.html');
 }
 
 //  Select element login and attach EventListener to the click event
 /* eslint-disable-next-line func-names ,prefer-arrow-callback */
 boutonlogin[2].addEventListener('click', function () {
   if (usertoken === null) {
-    document.querySelector('main').innerHTML = '';
-
-    // Integrate the login page for the site
-    loginConnexion();
-    // User authentication
-    Authentification();
+    /* eslint-disable-next-line no-restricted-globals */
+    window.location.replace('login.html');
   } else {
     // Call the function Logout
     logout();
   }
 });
 
-// Call the authentication function : will be executed once when the web page is refreshed
-Authentification();
 
 // Generated the function banner when user is connecting
 if (usertoken !== null) {
@@ -390,10 +382,10 @@ function ajoutNewWork() {
       const inputTitle = document.querySelector('#title').value;
       const SelectForm = document.querySelector('#category').value;
       const spantag = document.querySelector('.form-modal #spanErrorMessage');
-       //console.log(inputFile);
+      // console.log(inputFile);
 
       // Processing of form data
-      if(inputFile === undefined) {
+      if (inputFile === undefined) {
         spantag.innerHTML = 'Veuillez ajouter une image';
       } else if (inputFile !== undefined && inputFile.size / (1024 * 1024) > 4) {
         // For image tag of form Modal
@@ -426,7 +418,7 @@ function ajoutNewWork() {
               // Returns a promise container containing the server response
               const workresult = reponse.json();
               workresult.then((datareceived) => {
-                // then(data) will access data (which is an object) from the job we've created
+                // then(data) will access data (which is an object) from the work we've created
                 console.log(datareceived);
 
                 // Call this function(Once you have created a project) to
