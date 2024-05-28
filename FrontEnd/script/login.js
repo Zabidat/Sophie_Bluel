@@ -65,7 +65,7 @@ export function Authentification() {
  
 
 // Integrate the login page for the site
-loginConnexion();
+//loginConnexion(); 
 
 // User authentication
 Authentification();
